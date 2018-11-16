@@ -9,6 +9,23 @@
 
 void my_put_nbr2(unsigned int nb)
 {
+    if (nb == -2147483648) {
+        my_put_nbr2(-214748364);
+        my_putchar('8');
+    }
+    if (nb < 0) {
+        my_putchar('-');
+        nb = nb * (-1);
+    }
+    if ((nb >= 0) && (nb < 10)) {
+        my_putchar(nb + 48);
+    } else {
+        my_put_nbr2(nb / 10);
+        my_putchar((nb % 10) + 48);
+    }
+}
+/*
+{
     unsigned int nbr;
 
     if (nb >= 10) {
@@ -18,4 +35,5 @@ void my_put_nbr2(unsigned int nb)
         my_putchar(nbr + 48);
     } else
         my_putchar(nb + 48);
-}
+}*/
+
