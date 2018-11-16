@@ -24,16 +24,3 @@ void my_put_nbr2(unsigned int nb)
         my_putchar((nb % 10) + 48);
     }
 }
-/*
-{
-    unsigned int nbr;
-
-    if (nb >= 10) {
-        nbr = nb % 10;
-        nb = nb / 10;
-        my_put_nbr2(nb);
-        my_putchar(nbr + 48);
-    } else
-        my_putchar(nb + 48);
-}*/
-

@@ -25,7 +25,7 @@ void my_Adress_pointer(va_list ap)
 
 void my_Percentage(va_list ap)
 {
-    Percentage(va_arg(ap, char *));
+    my_putchar('%');
 }
 
 void my_u_put_nbr(va_list ap)

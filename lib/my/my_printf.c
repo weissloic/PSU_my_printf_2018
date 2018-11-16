@@ -8,12 +8,8 @@
 #include "../../include/my.h"
 #include <stdarg.h>
 
-void testfunction(char *s, ...)
+void flagfunction(int i, char *s, va_list ap)
 {
-    va_list ap;
-    va_start(ap, s);
-    int i = 0;
-
     if ((s[i] == '#' && s[i+1] == 'x')) {
         my_putstr("0x");
         point_func[4](ap);
@@ -29,7 +25,16 @@ void testfunction(char *s, ...)
         point_func[2](ap);
         i++;
     }
-    va_end(ap);
+}
+
+void writefunction(int i, int u,  char *s, va_list ap)
+{
+    if (u == 11) {
+        my_putchar('%');
+        my_putchar(s[i]);
+    }
+    else
+        point_func[u](ap);
 }
 
 int my_printf(char *s, ...)
@@ -43,14 +48,10 @@ int my_printf(char *s, ...)
     for (int i = 0; s[i] != '\0'; i++) {
         if (s[i] == '%') {
             s++;
-            for (u = 0; s[i] != tab[u] && u < 12; u++); {
-                testfunction(s);
-                if (u == 12) {
-                    my_putchar('%');
-                    my_putchar(s[i]);
-                }
-                else
-                    point_func[u](ap);
+            
+            for (u = 0; s[i] != tab[u] && u < 11; u++); {
+                //flagfunction(i, s, ap);
+                writefunction(i, u, s, ap);
             }
         } else
             my_putchar(s[i]);
