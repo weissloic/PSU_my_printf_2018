@@ -8,7 +8,7 @@
 #include "../../include/my.h"
 #include <stdarg.h>
 
-void hexa(int nb)
+void my_puthexa(int nb)
 {
     unsigned int div;
     unsigned int size_base;
@@ -28,7 +28,7 @@ void hexa(int nb)
     }
 }
 
-void octa(int nb)
+void my_putocta(int nb)
 {
     unsigned int div;
     unsigned int size_base;
@@ -48,7 +48,7 @@ void octa(int nb)
     }
 }
 
-void hexaUPP(int nb)
+void my_puthexaUPP(int nb)
 {
     unsigned int div;
     unsigned int size_base;
@@ -67,7 +67,8 @@ void hexaUPP(int nb)
         div = div / size_base;
     }
 }
-void Binary(int nb)
+
+void my_putBinary(int nb)
 {
     unsigned int div;
     unsigned int size_base;

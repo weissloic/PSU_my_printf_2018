@@ -8,8 +8,8 @@
 #include "../../include/my.h"
 #include <stdarg.h>
 
-void Adress_pointer(int Adress_pointer)
+void my_putAdress_pointer(int Adress_pointer)
 {
     my_putstr("0x");
-    hexa(Adress_pointer);
+    my_puthexa(Adress_pointer);
 }

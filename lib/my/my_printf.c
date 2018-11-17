@@ -8,7 +8,7 @@
 #include "../../include/my.h"
 #include <stdarg.h>
 
-void flagfunction(int i, char *s, va_list ap)
+void my_isflagfunction(int i, char *s, va_list ap)
 {
     if ((s[i] == '#' && s[i+1] == 'x')) {
         my_putstr("0x");
@@ -27,9 +27,9 @@ void flagfunction(int i, char *s, va_list ap)
     }
 }
 
-void writefunction(int i, int u,  char *s, va_list ap)
+void my_iswritefunction(int i, int u,  char *s, va_list ap)
 {
-    if (u == 11) {
+    if (u == 12) {
         my_putchar('%');
         my_putchar(s[i]);
     }
@@ -42,16 +42,14 @@ int my_printf(char *s, ...)
     va_list ap;
     va_start(ap, s);
 
-    char tab[11] = {'c', 's', 'd', 'x', 'X', 'o', 'b', 'p', '%', 'u', 'S'};
+    char tab[12] = {'c', 's', 'd', 'x', 'X', 'o', 'b', 'p', '%', 'u', 'S', 'i'};
     int u = 0;
 
     for (int i = 0; s[i] != '\0'; i++) {
         if (s[i] == '%') {
             s++;
-            
-            for (u = 0; s[i] != tab[u] && u < 11; u++); {
-                //flagfunction(i, s, ap);
-                writefunction(i, u, s, ap);
+            for (u = 0; s[i] != tab[u] && u < 12; u++); {
+                my_iswritefunction(i, u, s, ap);
             }
         } else
             my_putchar(s[i]);

@@ -50,41 +50,42 @@ int my_compute_power_it(int nb, int p);
 int my_print_params(int argc, char **argv);
 int my_show_word_array(char * const *tab);
 int my_printf(char *s, ...);
-void flagfunction(int i, char *s, va_list ap);
-void writefunction(int i, int u,  char *s, va_list ap);
-void test(char *s);
-void hexa(int);
-void hexaUPP(int);
-void Binary(int);
-void octa(int);
-void Adress_pointer(int);
-void Percentage(char);
+void my_isflagfunction(int i, char *s, va_list ap);
+void my_iswritefunction(int i, int u,  char *s, va_list ap);
+void my_getocta(char *s);
+void my_puthexa(int);
+void my_puthexaUPP(int);
+void my_putBinary(int);
+void my_putocta(int);
+void my_putAdress_pointer(int);
+void my_putPercentage(char);
 void my_put_nbr2(unsigned int nb);
 void my_putstroctal(char *);
-void character(va_list ap);
-void string(va_list ap);
-void number(va_list ap);
-void my_hexa(va_list ap);
-void my_hexaUPP(va_list ap);
-void my_octa(va_list ap);
-void my_Binary(va_list ap);
-void my_Adress_pointer(va_list ap);
-void my_Percentage(va_list ap);
-void my_u_put_nbr(va_list ap);
-void func_put_stroctal(va_list ap);
+void my_putcharacter1(va_list ap);
+void my_putstring1(va_list ap);
+void my_putnumber1(va_list ap);
+void my_puthexa1(va_list ap);
+void my_puthexaUPP1(va_list ap);
+void my_putocta1(va_list ap);
+void my_putBinary1(va_list ap);
+void my_putAdress_pointer1(va_list ap);
+void my_putPercentage1(va_list ap);
+void my_u_put_nbr1(va_list ap);
+void func_put_stroctal1(va_list ap);
 
-static void (*point_func[11])(va_list ap) = {
-    &character,
-    &string,
-    &number,
-    &my_hexa,
-    &my_hexaUPP,
-    &my_octa,
-    &my_Binary,
-    &my_Adress_pointer,
-    &my_Percentage,
-    &my_u_put_nbr,
-    &func_put_stroctal
+static void (*point_func[12])(va_list ap) = {
+    &my_putcharacter1,
+    &my_putstring1,
+    &my_putnumber1,
+    &my_puthexa1,
+    &my_puthexaUPP1,
+    &my_putocta1,
+    &my_putBinary1,
+    &my_putAdress_pointer1,
+    &my_putPercentage1,
+    &my_u_put_nbr1,
+    &func_put_stroctal1,
+    &my_putnumber1
 };
 
 

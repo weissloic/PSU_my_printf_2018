@@ -8,7 +8,7 @@
 #include "../../include/my.h"
 #include <stdarg.h>
 
-void func_put_stroctal(va_list ap)
+void func_put_stroctal1(va_list ap)
 {
     my_putstroctal(va_arg(ap, char *));
 }
