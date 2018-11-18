@@ -33,4 +33,3 @@ Test(my_printf, testing_int2, .init = redirect_all_std)
     my_printf("%i", 56);
     cr_assert_stdout_eq_str("56");
 }
-

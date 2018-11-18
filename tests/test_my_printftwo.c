@@ -25,10 +25,8 @@ Test(my_printf, testing_un, .init = redirect_all_stdtwo)
 Test(my_printf, testing_putocta, .init = redirect_all_stdtwo)
 {
     char str[5];
-
     my_strcpy(str, "toto");
     str[1] = 6;
-
     my_printf("%S", str);
     cr_assert_stdout_eq_str("t\006to");
 }

@@ -16,7 +16,6 @@ void redirect_all_stdfour(void)
     cr_redirect_stderr();
 }
 
-
 Test(my_printf, testing_percentage, .init = redirect_all_stdfour)
 {
     my_printf("%%");
