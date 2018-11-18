@@ -19,18 +19,18 @@ void redirect_all_std(void)
 Test(my_printf, testing_str, .init = redirect_all_std)
 {
     my_printf("%s", "Hello");
-   cr_assert_stdout_eq_str("Hello");
+    cr_assert_stdout_eq_str("Hello");
 }
 
 Test(my_printf, testing_int, .init = redirect_all_std)
 {
     my_printf("%d", 56);
-   cr_assert_stdout_eq_str("56");
+    cr_assert_stdout_eq_str("56");
 }
 
 Test(my_printf, testing_int2, .init = redirect_all_std)
 {
     my_printf("%i", 56);
-   cr_assert_stdout_eq_str("56");
+    cr_assert_stdout_eq_str("56");
 }
 

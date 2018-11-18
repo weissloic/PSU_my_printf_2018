@@ -20,23 +20,23 @@ void redirect_all_stdfour(void)
 Test(my_printf, testing_percentage, .init = redirect_all_stdfour)
 {
     my_printf("%%");
-   cr_assert_stdout_eq_str("%");
+    cr_assert_stdout_eq_str("%");
 }
 
 Test(my_printf, testing_other, .init = redirect_all_stdfour)
 {
     my_printf("%y");
-   cr_assert_stdout_eq_str("%y");
+    cr_assert_stdout_eq_str("%y");
 }
 
 Test(my_printf, testing_char, .init = redirect_all_stdfour)
 {
     my_printf("%c", 't');
-   cr_assert_stdout_eq_str("t");
+    cr_assert_stdout_eq_str("t");
 }
 
 Test(my_printf, testing_na, .init = redirect_all_stdfour)
 {
     my_printf("%%%%d", 5);
-   cr_assert_stdout_eq_str("%%d");
+    cr_assert_stdout_eq_str("%%d");
 }
