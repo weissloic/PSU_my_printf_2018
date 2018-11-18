@@ -14,14 +14,14 @@ void my_getocta(char *s)
         my_putstr("\\00");
     else if (*s > 7 && *s < 32)
         my_putstr("\\0");
-    else if (*s > 128)
+    else if (*s >= 127)
         my_putstr("\\");
 }
 
 void my_putstroctal(char *s)
 {
     while (*s){
-        if (*s < 32 || *s > 128){
+        if (*s < 32 || *s >= 127){
             my_getocta(s);
             my_putocta(*s);
         }

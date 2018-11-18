@@ -28,7 +28,7 @@ void my_puthexa1(va_list ap)
     my_puthexa(va_arg(ap, int));
 }
 
-void my_puthexaUPP1(va_list ap)
+void my_puthexaupp1(va_list ap)
 {
-    my_puthexaUPP(va_arg(ap, int));
+    my_puthexaupp(va_arg(ap, int));
 }

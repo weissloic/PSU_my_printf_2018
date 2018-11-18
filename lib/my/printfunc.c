@@ -8,9 +8,9 @@
 #include "../../include/my.h"
 #include <stdarg.h>
 
-void my_putBinary1(va_list ap)
+void my_putbinary1(va_list ap)
 {
-    my_putBinary(va_arg(ap, int));
+    my_putbinary(va_arg(ap, int));
 }
 
 void my_putocta1(va_list ap)
@@ -18,12 +18,12 @@ void my_putocta1(va_list ap)
     my_putocta(va_arg(ap, int));
 }
 
-void my_putAdress_pointer1(va_list ap)
+void my_putadress_pointer1(va_list ap)
 {
-    my_putAdress_pointer(va_arg(ap, int));
+    my_putadress_pointer(va_arg(ap, int));
 }
 
-void my_putPercentage1(va_list ap)
+void my_putpercentage1(va_list ap)
 {
     my_putchar('%');
 }

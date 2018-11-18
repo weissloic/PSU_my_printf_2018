@@ -48,7 +48,7 @@ void my_putocta(int nb)
     }
 }
 
-void my_puthexaUPP(int nb)
+void my_puthexaupp(int nb)
 {
     unsigned int div;
     unsigned int size_base;
@@ -68,7 +68,7 @@ void my_puthexaUPP(int nb)
     }
 }
 
-void my_putBinary(int nb)
+void my_putbinary(int nb)
 {
     unsigned int div;
     unsigned int size_base;

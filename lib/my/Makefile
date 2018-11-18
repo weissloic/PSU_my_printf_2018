@@ -2,9 +2,6 @@
 ## EPITECH PROJECT, 2018
 ## Makefile
 ## File description:
-## compile the lib
-##
-
 CC	=	gcc
 
 SRC	=	adresspointer.c \
@@ -12,6 +9,7 @@ SRC	=	adresspointer.c \
 		printfunc.c \
 		printfdeux.c \
 		printftrois.c \
+		my_strcpy.c \
 		my_put_nbr.c \
 		my_put_nbr2.c \
 		my_putchar.c \
